@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humot Perfume | Luxury Fragrance</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'humot-gold': '#c5a059',
+                        'humot-gold-light': '#dfc38a',
+                        'humot-dark': '#0a0a0a',
+                        'humot-darker': '#050505',
+                        'humot-muted': '#a1a1aa'
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['Inter', 'sans-serif'],
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+                        'gold-shimmer': 'linear-gradient(45deg, transparent 25%, rgba(197, 160, 89, 0.1) 50%, transparent 75%)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* DESIGN TOKENS */
+        :root {
+            --primary: #c5a059;
+            --secondary: #dfc38a;
+            --text: #ffffff;
+            --muted: #a1a1aa;
+            --bg: #0a0a0a;
+            --border: rgba(197, 160, 89, 0.2);
+            --radius: 0px;
+            --shadow: 0 10px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(197, 160, 89, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        section[id], footer[id] {
+            scroll-margin-top: 100px;
+        }
+
+        .gold-glow {
+            box-shadow: 0 0 20px rgba(197, 160, 89, 0.2);
+        }
+
+        .perfume-text-stroke {
+            -webkit-text-stroke: 1px rgba(197, 160, 89, 0.3);
+            color: transparent;
+        }
+
+        .shimmer {
+            background-size: 200% 200%;
+            animation: shimmer 3s infinite linear;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
